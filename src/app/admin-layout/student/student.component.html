@@ -1,0 +1,35 @@
+<div class="mycol">
+  <div class="pl-3 pt-2 pb-2">
+   
+
+    <!-- code here -->
+
+    <!-- Default form login -->
+  <!--<form class="text-center border border-light p-5">-->
+
+    
+    <form class="text-center border border-light" [formGroup]="form" (ngSubmit)="onSubmit(form)">
+  <p class="h4 mb-4">Search Student profile</p>
+
+  <!-- Email -->
+  <input type="string" id="defaultDistrict" class="form-control mb-4" placeholder="District">
+
+  <!-- Sign in button -->
+  <button mdbBtn color="info" block="true" class="my-4" type="search">Search</button>
+  <a class="myboder waves-light" routerLinkActive="active" routerLink="views" mdbWavesEffect> &nbsp;</a>
+</form>
+
+
+
+
+<!-- Default form login -->
+<p class="font-weight-bold">Block student list</p>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user1</a>
+  <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user2</a>
+  <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user3</a>
+  <a href="#" class="list-group-item list-group-item-action disabled waves-light" mdbWavesEffect>user4</a>
+</div>
+
+  </div>
+</div>
