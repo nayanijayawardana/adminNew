@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './newsfeed.component.html',
   styleUrls: ['./newsfeed.component.scss']
 })
-export class NewsfeedComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class NewsfeedComponent  {
+  
 
 }

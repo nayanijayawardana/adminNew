@@ -1,23 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminServiceService } from '../../../services/admin-service.service';
+
 
 @Component({
   selector: 'app-barchart',
   templateUrl: './barchart.component.html',
   styleUrls: ['./barchart.component.scss']
 })
-export class BarchartComponent implements OnInit {
 
-    
+
+export class BarchartComponent implements OnInit {
+    Tcount;
+    Scount;
+    TAmpara;
+    SAmpara;
+    Tcolo;
+    Scolo;
+
   public chartType:string = 'bar';
 
   public chartDatasets:Array<any> = [
-
-
-      {data: [1,55,5,56,62,8,69, ], label: 'Tutors'},
-      {data: [80, 58, 40, 69, 86, 67, 90, 22, 7, 17, 18, 9], label: 'Student'}
+      
+     // {data: [], label: 'Tutors'},
+      //{data: [], label: 'Student'}
+      {data: [this.Tcount], label: 'Tutors'},
+      {data: [this.Scount], label: 'Student'},
   ];
 
-  public chartLabels:Array<any> = ['Ampara', 'gampaha', 'kegalle', 'rathnapura', 'kurunegala', 'kandy', 'matara', 'galle', 'hambantota', 'matale', 'anuradapura', 'polonnarywa','ampara','badulla','mulathiw','halawatha','puttalama','mannar','jaffna','batticaloa'];
+  public chartLabels:Array<any> = ['colombo','ampara'];
+ 
 
   public chartColors:Array<any> = [
       {
@@ -46,10 +57,28 @@ export class BarchartComponent implements OnInit {
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }
 
+  
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+ constructor(
+    private adminService: AdminServiceService
+ ) { }
 
+ ngOnInit() {
+
+    this.adminService.districtwise()
+    .subscribe(res =>{
+        let data = res.json();
+       this.TAmpara =data.Tcount[0];
+       this.SAmpara =data.Scount[0];
+   
+       //this.Tbad =data.Tcount[2];
+       //this.Sbad =data.Scount[2];
+       //this.Tbat =data.Tcount[3];
+       //this.Sbat =data.Scount[3];
+       this.Tcolo =data.Tcount[4];
+       this.Scolo =data.Scount[4];
+
+  })
+ }
 }

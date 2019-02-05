@@ -8,7 +8,8 @@ import { TutorComponent } from './admin-layout/tutor/tutor.component';
 import { MsgNComComponent } from './admin-layout/msg-n-com/msg-n-com.component';
 import { NewsfeedComponent } from './admin-layout/newsfeed/newsfeed.component';
 import { BoostofferComponent } from './admin-layout/boostoffer/boostoffer.component';
-
+import { ViewsComponent } from './admin-layout/views/views.component';
+import { ViewtComponent } from './admin-layout/viewt/viewt.component';
 
 const routes: Routes = [
   {
@@ -24,8 +25,23 @@ const routes: Routes = [
         {path:"tutor", component:TutorComponent},           
         {path:"msgncom", component: MsgNComComponent},        
         {path:"newsfeed", component: NewsfeedComponent},  
-        {path:"boostoffer", component: BoostofferComponent}, 
+        {path:"boostoffer", component: BoostofferComponent},      
     ]
+  },
+  {
+    path:"admin/student",
+    component: AdminLayoutComponent, 
+    children : [
+      {path:"views", component: ViewsComponent}, 
+    ] 
+  },
+
+  {
+    path:"admin/tutor",
+    component: AdminLayoutComponent, 
+    children : [
+      {path:"viewt", component: ViewtComponent}, 
+    ] 
   },
 ];
 

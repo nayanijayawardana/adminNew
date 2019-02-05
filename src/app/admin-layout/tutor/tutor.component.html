@@ -2,14 +2,12 @@
   <div class="pl-3 pt-2 pb-2">
 
 
-    <!-- code here -->
+  
 
     <!-- Default form login -->
 <form class="text-center border border-light p-5">
 
   <p class="h4 mb-4">Search Tutor profile</p>
-
-
 
   <!-- Email -->
   <input type="string" id="defaultDistrict" class="form-control mb-4" placeholder="District">
@@ -17,22 +15,63 @@
   <!-- Password -->
   <input type="string" id="defaultSubject" class="form-control mb-4" placeholder="Subject">
 
- 
-  <!-- Sign in button -->
-  <button mdbBtn color="info" block="true" class="my-4" type="search">Search</button>
 
+  <!-- Sign in button -->
+  <button mdbBtn color="info" block="true" class="btn btn-primary" type="search" routerLinkActive="active" routerLink="viewt">Search</button>
+  <a class="myboder waves-light" routerLinkActive="active" routerLink="viewt" mdbWavesEffect> &nbsp;</a>
  
 </form>
-<!-- Default form login -->
+<!-- Default form login 
 <p class="font-weight-bold">Block Tutor list</p>
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Tutor1</a>
+  <td><a class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Tutor1</a>
+  <span class="badge badge-primary badge-pill pull-right">{{T1}}</span></td>
+
   <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Tutor2</a>
   <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>Tutor3</a>
   <a href="#" class="list-group-item list-group-item-action disabled waves-light" mdbWavesEffect>Tutor4</a>
-</div>
+</div>-->
 
 
+            <!--Block List-->
+
+<p class="font-weight-bold">Already block tutor list</p>
+<table class="table table-hover" item-width="100" style="height:15%" width="5">
+    <!-- Table head -->
+    <thead class="blue-grey lighten-4">
+      <tr>
+       <!-- <th>#</th>-->
+        <th>Block Tutor list</th> 
+      </tr>
+    </thead>
+    <!-- Table head -->
+  
+    <!-- Table body -->
+    <tbody>
+      <tr>
+       <!-- <th scope="row">1</th>-->
+        <td>
+        <span class="badge badge-primary badge-pill pull-right">{{T1}}</span>
+        </td>
+      </tr>
+
+      <tr>
+        <!-- <th scope="row">1</th>-->
+         <td>
+         <span class="badge badge-primary badge-pill pull-right">{{T2}}</span>
+         </td>
+       </tr>
+
+       <tr>
+        <!-- <th scope="row">1</th>-->
+         <td>
+         <span class="badge badge-primary badge-pill pull-right">{{T3}}</span>
+         </td>
+       </tr>
+
+
+    </tbody>
+  </table>
 
   </div>
 </div>

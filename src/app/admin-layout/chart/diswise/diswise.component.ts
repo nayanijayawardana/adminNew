@@ -7,12 +7,17 @@ import { AdminServiceService } from '../../../services/admin-service.service';
 })
 export class DiswiseComponent implements OnInit {
 
-  TAmpara;
+TAmpara;
 SAmpara;
 TAnu;
 SAnu;
+Tbad;
+Sbad;
+Tbat;
+Sbat;
 Tcolo;
 Scolo;
+
 
   constructor( private adminService: AdminServiceService) { }
 
@@ -25,6 +30,10 @@ Scolo;
        this.SAmpara =data.Scount[0];
        this.TAnu =data.Tcount[1];
        this.SAnu =data.Scount[1];
+       //this.Tbad =data.Tcount[2];
+       //this.Sbad =data.Scount[2];
+       //this.Tbat =data.Tcount[3];
+       //this.Sbat =data.Scount[3];
        this.Tcolo =data.Tcount[4];
        this.Scolo =data.Scount[4];
      

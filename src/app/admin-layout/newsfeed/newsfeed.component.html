@@ -6,18 +6,19 @@
 
 
   <!-- Name -->
-  <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Title">
-
+  <div class="form-group">
+  <input ngModel name="title" #title="ngModel" (change)="log(title)" type="text" id="title" class="form-control mb-4" placeholder="Title">
+</div>
 
 
   <!-- Message -->
   <div class="form-group">
-    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Our News"></textarea>
+    <textarea class="form-control rounded-0" id="message" rows="10" placeholder="Our News"></textarea>
   </div>
 
  
   <!-- Send button -->
-  <button class="btn btn-info btn-block" type="submit">Send</button>
+  <button class="btn btn-primary" type="submit">submit</button>
 
 </form>
 <!-- Default form contact -->

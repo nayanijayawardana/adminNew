@@ -16,15 +16,36 @@ export class AdminServiceService {
   }
   
  tcount(){
-
   return this.http.get("https://guarded-beyond-19031.herokuapp.com/subjectCount");
-
  }
 
  districtwise(){
   return this.http.get("https://guarded-beyond-19031.herokuapp.com/districtCount");
-
-
  }
+
+ getTutorList(){
+  return this.http.get("https://guarded-beyond-19031.herokuapp.com/search ");
+ }
+
+ blockUsers(){
+   return this.http.get("https://guarded-beyond-19031.herokuapp.com/block");
+ }
+
+ unblockUsers(){
+  return this.http.get("https://guarded-beyond-19031.herokuapp.com/unblock");
+}
+
+ blockTutorList(){
+  return this.http.get("https://guarded-beyond-19031.herokuapp.com/blockList ");  
+ }
+
+ writeNews(){
+   return this.http.get("https://guarded-beyond-19031.herokuapp.com/writeNews");
+ }
+
+ viewNews(){
+   return this.http.get("https://guarded-beyond-19031.herokuapp.com/viewNews");
+ }
+
 
 }

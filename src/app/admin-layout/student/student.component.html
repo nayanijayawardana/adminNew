@@ -15,21 +15,66 @@
   <input type="string" id="defaultDistrict" class="form-control mb-4" placeholder="District">
 
   <!-- Sign in button -->
-  <button mdbBtn color="info" block="true" class="my-4" type="search">Search</button>
+  <button mdbBtn color="info" block="true" class="btn btn-primary" type="search" routerLinkActive="active" routerLink="views">Search</button>
   <a class="myboder waves-light" routerLinkActive="active" routerLink="views" mdbWavesEffect> &nbsp;</a>
 </form>
 
 
 
 
-<!-- Default form login -->
+<!-- Default form login 
 <p class="font-weight-bold">Block student list</p>
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user1</a>
   <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user2</a>
   <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>user3</a>
   <a href="#" class="list-group-item list-group-item-action disabled waves-light" mdbWavesEffect>user4</a>
-</div>
+</div>-->
+
+
+
+            <!--Block List-->
+
+            <p class="font-weight-bold">Already block Student list</p>
+            <table class="table table-hover" item-width="100" style="height:15%" width="5">
+                <!-- Table head -->
+                <thead class="blue-grey lighten-4">
+                  <tr>
+                   <!-- <th>#</th>-->
+                    <th>Block student list</th> 
+                  </tr>
+                </thead>
+                <!-- Table head -->
+              
+                <!-- Table body -->
+                <tbody>
+                  <tr>
+                   <!-- <th scope="row">1</th>-->
+                    <td>
+                    
+                    <span class="badge badge-primary badge-pill pull-right">{{s1}}</span>
+                    </td>
+                  
+                  </tr>
+            
+                  <tr>
+                    <!-- <th scope="row">1</th>-->
+                     <td>
+                     <span class="badge badge-primary badge-pill pull-right">{{s2}}</span>
+                     </td>
+                   </tr>
+            
+                   <tr>
+                    <!-- <th scope="row">1</th>-->
+                     <td>
+                     <span class="badge badge-primary badge-pill pull-right">{{s3}}</span>
+                     </td>
+                   </tr> 
+            
+            
+                </tbody>
+              </table>
 
   </div>
 </div>
+
