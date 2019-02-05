@@ -23,20 +23,19 @@ export class BarchartComponent implements OnInit {
       
      // {data: [], label: 'Tutors'},
       //{data: [], label: 'Student'}
-      {data: [this.Tcount], label: 'Tutors'},
-      {data: [this.Scount], label: 'Student'},
+      {data: [6,9,16,15,3,11,4], label: 'Tutors'},
+      {data: [2,7,8,13,5,9,3], label: 'Student'},
   ];
 
-  public chartLabels:Array<any> = ['colombo','ampara'];
+  public chartLabels:Array<any> = ['colombo','ampara','Rathnapura', 'kegalle','galle', 'gampha','kandy'];
  
-
   public chartColors:Array<any> = [
       {
           backgroundColor: 'rgba(151, 150, 218, 0.466)',
           borderColor: 'rgba(109, 108, 204, 0.466)',
           borderWidth: 2,
           pointBackgroundColor: 'rgba(220,220,220,1)',
-          pointBorderColor: '#fff',
+          pointBorderColor: '#fff', 
           pointHoverBackgroundColor: '#fff',
           pointHoverBorderColor: 'rgba(220,220,220,1)'
       },

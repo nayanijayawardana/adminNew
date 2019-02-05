@@ -40,11 +40,15 @@ export class AdminServiceService {
  }
 
  writeNews(){
-   return this.http.get("https://guarded-beyond-19031.herokuapp.com/writeNews");
+   return this.http.get("https://guarded-beyond-19031.herokuapp.com/insertNews");
  }
 
  viewNews(){
-   return this.http.get("https://guarded-beyond-19031.herokuapp.com/viewNews");
+   return this.http.get("https://guarded-beyond-19031.herokuapp.com/getNews");
+ }
+
+ boostOffer(){
+  return this.http.get("https://guarded-beyond-19031.herokuapp.com/addBoostOffer");
  }
 
 
