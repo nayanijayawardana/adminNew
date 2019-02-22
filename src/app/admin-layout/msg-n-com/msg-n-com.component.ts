@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-msg-n-com',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MsgNComComponent implements OnInit {
 
-  constructor() { }
+msgs = [];
+
+  constructor(
+    private http: Http
+  ) { }
 
   ngOnInit() {
+    this.http.get("https://guarded-beyond-19031.herokuapp.com/viewAllSuggestions")
+      .subscribe(res=>{
+        this.msgs = res.json().suggestions;
+      })
   }
 
 }
