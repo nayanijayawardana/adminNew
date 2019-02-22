@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http } from "@angular/http";
+import { News } from '../admin-layout/modle/news.model';
+import {ViewT} from '../admin-layout/modle/viewT.model';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,20 +11,23 @@ import { Http } from "@angular/http";
 export class AdminServiceService {
 
   constructor(
-    private http: Http
+    private http: HttpClient,
+    private httpp : Http
+    
   ) { }
+  
 
 
   adminData(){
-    return this.http.get("https://guarded-beyond-19031.herokuapp.com/adminDash");
+    return this.httpp.get("https://guarded-beyond-19031.herokuapp.com/adminDash");
   }
   
  tcount(){
-  return this.http.get("https://guarded-beyond-19031.herokuapp.com/subjectCount");
+  return this.httpp.get("https://guarded-beyond-19031.herokuapp.com/subjectCount");
  }
 
  districtwise(){
-  return this.http.get("https://guarded-beyond-19031.herokuapp.com/districtCount");
+  return this.httpp.get("https://guarded-beyond-19031.herokuapp.com/districtCount");
  }
 
  getTutorList(){
@@ -39,8 +46,8 @@ export class AdminServiceService {
   return this.http.get("https://guarded-beyond-19031.herokuapp.com/blockList ");  
  }
 
- writeNews(){
-   return this.http.get("https://guarded-beyond-19031.herokuapp.com/insertNews");
+ writeNews(news):Observable<any>{
+   return this.http.post<News>("https://guarded-beyond-19031.herokuapp.com/insertNews",news);
  }
 
  viewNews(){
@@ -50,6 +57,11 @@ export class AdminServiceService {
  boostOffer(){
   return this.http.get("https://guarded-beyond-19031.herokuapp.com/addBoostOffer");
  }
+
+ viewTutor(viewt):Observable<any>{
+  return this.http.post<ViewT>("https://guarded-beyond-19031.herokuapp.com/search",viewt);
+ }
+
 
 
 }

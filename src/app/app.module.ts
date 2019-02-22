@@ -29,6 +29,7 @@ import { SubwiseComponent } from './admin-layout/chart/subwise/subwise.component
 import { BarchartComponent } from './admin-layout/chart/barchart/barchart.component';
 import { ViewsComponent } from './admin-layout/views/views.component';
 import { ViewtComponent } from './admin-layout/viewt/viewt.component';
+import { HttpClientXsrfModule, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -74,6 +75,7 @@ import { ViewtComponent } from './admin-layout/viewt/viewt.component';
     ReactiveFormsModule,
     HttpModule,
     RouterModule,
+HttpClientModule
 
 
 

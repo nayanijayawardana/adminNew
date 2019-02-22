@@ -28,21 +28,21 @@ const routes: Routes = [
         {path:"boostoffer", component: BoostofferComponent},      
     ]
   },
-  {
-    path:"admin/student",
-    component: AdminLayoutComponent, 
-    children : [
-      {path:"views", component: ViewsComponent}, 
-    ] 
-  },
+ // {
+    //path:"admin/student",
+  //  component: AdminLayoutComponent, 
+   // children : [
+    //  {path:"views", component: ViewsComponent}, 
+   // ] 
+ // },
 
-  {
-    path:"admin/tutor",
-    component: AdminLayoutComponent, 
-    children : [
-      {path:"viewt", component: ViewtComponent}, 
-    ] 
-  },
+//  {
+  //  path:"admin/tutor",
+    //component: AdminLayoutComponent, 
+    //children : [
+     // {path:"viewt", component: ViewtComponent}, 
+    //] 
+  //},
 ];
 
 @NgModule({

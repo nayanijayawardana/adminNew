@@ -59,3 +59,11 @@ tbody tr:hover {
     height: 100%;
     z-index: 50;
 }
+ .profile {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    // box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+    border: solid 3px rgb(177, 176, 176);
+  }
+  

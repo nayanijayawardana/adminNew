@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminServiceService } from '../../services/admin-service.service';
 
 @Component({
   selector: 'app-viewt',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewtComponent implements OnInit {
 
-  constructor() { }
+ 
+
+
+  constructor(
+    private viewService: AdminServiceService
+  ) { }
 
   ngOnInit() {
+  
   }
 
 }

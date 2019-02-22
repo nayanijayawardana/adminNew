@@ -10,17 +10,63 @@
   <p class="h4 mb-4">Search Tutor profile</p>
 
   <!-- Email -->
-  <input type="string" id="defaultDistrict" class="form-control mb-4" placeholder="District">
+  <input type="string"[(ngModel)]="viewT.district" name="defaultDistrict" class="form-control mb-4" placeholder="District">
 
   <!-- Password -->
-  <input type="string" id="defaultSubject" class="form-control mb-4" placeholder="Subject">
+  <input type="string"[(ngModel)]="viewT.subject" name="defaultSubject" class="form-control mb-4" placeholder="Subject">
 
 
   <!-- Sign in button -->
-  <button mdbBtn color="info" block="true" class="btn btn-primary" type="search" routerLinkActive="active" routerLink="viewt">Search</button>
+  <button mdbBtn color="info" block="true" class="btn btn-primary" type="search" (click)="searchT()">Search</button>
   <a class="myboder waves-light" routerLinkActive="active" routerLink="viewt" mdbWavesEffect> &nbsp;</a>
  
 </form>
+
+
+
+          <!--tutor List-->
+
+          <p class="font-weight-bold">tutor list</p>
+          <table class="table table-hover" item-width="100" style="height:15%" width="5">
+              <!-- Table head -->
+              <thead class="blue-grey lighten-4">
+                <tr>
+                 <!-- <th>#</th>-->
+                 <th>image</th>
+                  <th>Tutor first name</th> 
+                  <th>Tutor last name</th>
+                 
+                  <th>telephone number</th>
+                  <th>email</th>
+                </tr>
+              </thead>
+              <!-- Table head -->
+            
+              <!-- Table body -->
+              <tbody>
+                <tr *ngFor="let tutor of tutorList" >
+                 <!-- <th scope="row">1</th>-->
+                 <td>
+                  
+    <img src={{tutor.imgUrl}} alt="profile-sample3" class="profile" />
+                </td>
+                  <td>
+                    {{tutor.fname}}
+                  </td>
+                  <td>
+                    {{tutor.lname}}
+                  </td>
+                  <td>
+                    {{tutor.mobile}}
+                  </td>
+                  <td>
+                    {{tutor.email}}
+                  </td>
+                  
+                </tr>
+        
+              </tbody>
+            </table>
 <!-- Default form login 
 <p class="font-weight-bold">Block Tutor list</p>
 <div class="list-group">
